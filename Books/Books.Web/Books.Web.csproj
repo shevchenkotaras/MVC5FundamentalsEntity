@@ -198,11 +198,22 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DataContexts\BookMigrations\201701092119403_InitialCreate.cs" />
+    <Compile Include="DataContexts\BookMigrations\201701092119403_InitialCreate.Designer.cs">
+      <DependentUpon>201701092119403_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\BookMigrations\Configuration.cs" />
     <Compile Include="DataContexts\BooksDb.cs" />
     <Compile Include="DataContexts\IdnetityDb.cs" />
+    <Compile Include="DataContexts\IndntityMigrations\201701092117511_InitialCreate.cs" />
+    <Compile Include="DataContexts\IndntityMigrations\201701092117511_InitialCreate.Designer.cs">
+      <DependentUpon>201701092117511_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContexts\IndntityMigrations\Configuration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -284,6 +295,14 @@
       <Project>{3890e15a-790f-4972-9bf9-d1b3ced64e27}</Project>
       <Name>Books.Entitites</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataContexts\BookMigrations\201701092119403_InitialCreate.resx">
+      <DependentUpon>201701092119403_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataContexts\IndntityMigrations\201701092117511_InitialCreate.resx">
+      <DependentUpon>201701092117511_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
